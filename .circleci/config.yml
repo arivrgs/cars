@@ -6,5 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install dependencies
+          command: sudo apt-get update && sudo apt-get install build-essential g++
+      - run:
           name: run tests
           command: make car-test
